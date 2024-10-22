@@ -1,10 +1,15 @@
 .button {
-    border-radius: 6px;
-    padding: 8px 30px;
-    font-size: 16px;
-    font-family: inherit;
+    width: 119px;
+    height: 56px;
+    padding: 16px 32px;
     cursor: pointer;
     transition: background 0.25s;
+    
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
 }
 
 .button:hover {
@@ -12,5 +17,9 @@
 }
 
 .accent {
-    background: #312EB5;
+    color: white;
+    background: rgba(123, 110, 246, 1);
+    border: 2px solid rgba(123, 110, 246, 1);
+    border-radius: 12px;
+    opacity: 0px;
 }
