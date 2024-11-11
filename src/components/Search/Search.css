@@ -4,6 +4,6 @@
     align-items: center;
     border: 1px solid #323B54;
     border-radius: 12px;
-    min-width: 300px;
+    width: 384px;
     gap:16px;
 }

@@ -1,0 +1,6 @@
+.catalog-container{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin: 20px 0;
+}

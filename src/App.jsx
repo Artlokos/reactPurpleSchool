@@ -13,8 +13,11 @@ function App() {
       <Navbar/>
       <Header value="Поиск"/>
       <Paragraph value="Введите название фильма, сериала или мультфильма для поиска и добавления в избранное."/>
-      <Search/>
-      <Button text="Искать" onClick={()=>{console.log('Search');}}/>
+      <div className="search-container">
+        <Search/>
+        <Button text="Искать" onClick={()=>{console.log('Search');}}/>
+      </div>
+      
       <Catalog/>
       
     </>
