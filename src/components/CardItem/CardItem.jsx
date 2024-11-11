@@ -9,7 +9,7 @@ function CardItem({ name, img, rating }) {
           <p>{rating}</p>
         </div>
 
-        <img src={img} alt="BlackWidow" />
+        <img src={img} alt={name} />
 
         <p>{name}</p>
 

@@ -5,9 +5,9 @@ import Header from './components/Header/Header';
 import Paragraph from './components/Paragraph/Paragraph';
 import Search from './components/Search/Search';
 import Navbar from './layout/Navbar/Navbar';
+import cardItemList from './assets/cardItemList.jsx';
 
 function App() {
-
   return (
     <>
       <Navbar/>
@@ -18,7 +18,7 @@ function App() {
         <Button text="Искать" onClick={()=>{console.log('Search');}}/>
       </div>
       
-      <Catalog/>
+      <Catalog items={cardItemList}/>
       
     </>
   );

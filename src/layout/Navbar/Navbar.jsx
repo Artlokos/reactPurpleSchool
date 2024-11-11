@@ -9,7 +9,7 @@ function Navbar(){
                         <li><a href="#">Поиск фильмов</a></li>
                         <li>
                             <a href="#">Мои фильмы</a>
-                            <div className='navbar-list-counter'>1</div>
+                            <div className='navbar-list-counter'></div>
                         </li>
                         <li>
                             <a href="#">Войти</a>
