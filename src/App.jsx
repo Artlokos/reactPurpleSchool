@@ -14,8 +14,8 @@ function App() {
       <Header value="Поиск"/>
       <Paragraph value="Введите название фильма, сериала или мультфильма для поиска и добавления в избранное."/>
       <Search/>
-      <Catalog/>
       <Button text="Искать" onClick={()=>{console.log('Search');}}/>
+      <Catalog/>
       
     </>
   );
