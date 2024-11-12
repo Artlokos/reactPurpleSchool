@@ -1,4 +1,4 @@
-import './CardButton.css';
+import './CardButton.module.css';
 
 function CardButton({children, className}){
     const cl = 'card-button' + (className ? ' ' + className : '');
