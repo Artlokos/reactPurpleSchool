@@ -1,24 +1,22 @@
-import styles from './Input.module.css';
-import cn from 'classnames';
-import { forwardRef } from 'react';
+import { forwardRef } from "react";
+import styles from "./Input.module.css";
+import cn from "classnames";
 
-
-const Input = forwardRef(function Input({className, inValid=true, appearence, ...props}, ref) {
-
-    return (
-        <input
-        {...props}
-        // type={type}
-        // onChange={onChange}
-        ref={ref}
-        // value={value}
-        // name="title"
-        className={cn(className, styles['input'], {
-          [styles['invalid']]: !inValid,
-          [styles['input-title']]: appearence === 'title'
-        })} 
-      />
-    );
+const Input = forwardRef(function Input(
+  { isValid, appearence = "text", className, ...props },
+  ref
+) {
+  return (
+    <input
+      ref={ref}
+      className={cn(className, {
+        [styles["invalid"]]: isValid,
+        [styles["input-title"]]: appearence == "title",
+        [styles["input"]]: appearence == "text",
+      })}
+      {...props}
+    />
+  );
 });
 
 export default Input;

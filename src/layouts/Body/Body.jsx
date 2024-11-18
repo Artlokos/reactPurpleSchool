@@ -1,13 +1,7 @@
-import styles from './Body.module.css';
+import "./Body.css";
 
-
-function Body({children}) {
-
-    return (
-        <div className={styles['body']}>
-            {children}
-        </div>
-    );
+function Body({ children }) {
+  return <div className="body">{children}</div>;
 }
 
 export default Body;

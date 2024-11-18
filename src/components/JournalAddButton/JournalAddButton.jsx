@@ -1,15 +1,15 @@
-import styles from './JournalAddButton.module.css';
-import CardButton from '../CardButton/CardButton';
+import CardButton from "../CardButton/CardButton";
+import "./JournalAddButton.css";
 
 function JournalAddButton() {
   return (
-    <CardButton className={styles['journal-add']}>
+    <CardButton className="journal-add">
       <svg
+        xmlns="http://www.w3.org/2000/svg"
         width="20"
         height="21"
         viewBox="0 0 20 21"
         fill="none"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M10 4.96265V16.6293"
