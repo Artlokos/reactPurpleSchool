@@ -1,11 +1,18 @@
-import "./Button.css";
+import { forwardRef } from "react";
+import styles from "./Button.module.css";
 
-function Button({ text, onClick }) {
-  return (
-    <button className="button accent" onClick={onClick}>
+// eslint-disable-next-line react/display-name
+const Button = forwardRef(({ text, onClick, type }, ref) => (
+  <>
+    <button
+      type={type}
+      ref={ref}
+      className={`${styles.button} ${styles.accent}`}
+      onClick={onClick}
+    >
       {text}
     </button>
-  );
-}
+  </>
+));
 
 export default Button;

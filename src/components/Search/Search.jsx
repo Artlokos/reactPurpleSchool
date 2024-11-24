@@ -1,9 +1,9 @@
-import "./Search.css";
+import styles from "./Search.module.css";
 import UniInput from "../UniInput/UniInput";
 
 function Search() {
   return (
-    <div className="search">
+    <div className={styles["search"]}>
       <svg
         width="24"
         height="24"
