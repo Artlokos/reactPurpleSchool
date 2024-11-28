@@ -1,66 +1,33 @@
-import './App.css';
-import Header from './components/Header/Header';
-import JournalAddButton from './components/JournalAddButton/JournalAddButton';
-import JournalForm from './components/JournalForm/JournalForm';
-import JournalList from './components/JournalList/JournalList';
-import Body from './layouts/Body/Body';
-import LeftPanel from './layouts/LeftPanel/LeftPanel';
-import { useLocalStorage } from './hooks/use-localstorage.hook';
-import { UserContextProvidev } from './context/user.context';
-import { useState } from 'react';
-
-function mapItems(items) {
-	if (!items) {
-		return [];
-	}
-	return items.map(i => ({
-		...i,
-		date: new Date(i.date)
-	}));
-}
+import "./App.css";
+import Button from "./components/Button/Button";
+import Catalog from "./components/Catalog/Catalog";
+import Header from "./components/Header/Header";
+import Paragraph from "./components/Paragraph/Paragraph";
+import Search from "./components/Search/Search";
+import Navbar from "./layout/Navbar/Navbar";
+import cardItemList from "./assets/cardItemList.jsx";
+import Login from "./components/Login/Login.jsx";
 
 function App() {
-	const [items, setItems] = useLocalStorage('data');
-	const [selectedItem, setSelectedItem] = useState(null);
-	console.log('App');
+  return (
+    <>
+      <Navbar />
+      <Header value="Поиск" />
+      <Paragraph value="Введите название фильма, сериала или мультфильма для поиска и добавления в избранное." />
+      <div className="search-container">
+        <Search />
+        <Button
+          text="Искать"
+          onClick={() => {
+            console.log("Search");
+          }}
+        />
+      </div>
 
-	const addItem = item => {
-		if (!item.id) {
-			setItems([...mapItems(items), {
-				...item,
-				date: new Date(item.date),
-				id: items.length > 0 ? Math.max(...items.map(i => i.id)) + 1 : 1
-			}]);
-		} else {
-			setItems([...mapItems(items).map(i => {
-				if (i.id === item.id) {
-					return {
-						...item
-					};
-				}
-				return i;
-			})]);
-		}
-	};
-
-	const deleteItem = (id) => {
-		setItems([...items.filter(i => i.id !== id)]);
-	};
-
-	return (
-		<UserContextProvidev>
-			<div className='app'>
-				<LeftPanel>
-					<Header/>
-					<JournalAddButton clearForm={() => setSelectedItem(null)}/>
-					<JournalList items={mapItems(items)} setItem={setSelectedItem} />
-				</LeftPanel>
-				<Body>
-					<JournalForm onSubmit={addItem} onDelete={deleteItem} data={selectedItem}/>
-				</Body>
-			</div>
-		</UserContextProvidev>
-	);
+      <Catalog items={cardItemList} />
+      <Login />
+    </>
+  );
 }
 
 export default App;

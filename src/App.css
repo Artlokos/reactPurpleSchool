@@ -1,4 +1,19 @@
-.app {
-  display: flex;
-  padding: 30px;
+#root {
+  max-width: 1280px;
+  min-width: 1144px;
+  padding: 0 120px;
+  background: rgba(18, 24, 41, 1);
 }
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+h1,h2,h3,h4,h5,h6,ul,li{
+  margin: 0;
+  padding:0;
+}
+

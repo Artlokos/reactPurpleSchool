@@ -1,16 +1,6 @@
-import SelectUser from '../SelectUser/SelectUser';
-import Logo from '../Logo/Logo';
+import styles from "./Header.module.css";
 
-const logos = ['/logo.svg', '/vite.svg'];
-
-function Header() {
-
-	return (
-		<>
-			<Logo image={logos[0]} />
-			<SelectUser />
-		</>
-	);
+function Header({ value }) {
+  return <h1 className={styles["header-1"]}>{value}</h1>;
 }
-
 export default Header;
