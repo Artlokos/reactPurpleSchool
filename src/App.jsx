@@ -19,7 +19,7 @@ function App() {
         <Button
           text="Искать"
           onClick={() => {
-            console.log("Search");
+                        
           }}
         />
       </div>
